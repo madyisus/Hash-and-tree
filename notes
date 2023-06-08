@@ -1,0 +1,8 @@
+Arbol string -> AVLTree
+Arbol long -> AVLTree
+
+Hash cerrado string -> Vlermanda simple_hash - HashClosedStr
+Hash cerrado long -> Vlermanda modificado - HashClosedLong
+
+Hash abierto string -> 
+Hash abierto long -> HashOpenLong
