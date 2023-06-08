@@ -26,7 +26,7 @@ public:
     table[index] = {key, value};
   }
 
-  int get(long key) const {
+  int find(long key) const {
     int index = hash(key);
     int attempt = 0;
     while (table[index].first != 0 && table[index].first != key) {

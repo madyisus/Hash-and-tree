@@ -11,9 +11,9 @@ private:
 
 public:
   HashOpenStr(int V);
-  void insertItem(long key, int data);
+  void insert(long key, int data);
   void deleteItem(long key);
-  int searchItem(long key);
+  int find(long key);
   int checkPrime(int n);
   int getPrime(int n);
   int hashFunction(long key);

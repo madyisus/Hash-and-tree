@@ -28,7 +28,7 @@ public:
     table[index] = {key, value};
   }
 
-  int get(const string& key) const {
+  int find(const string& key) const {
     int index = hash(key);
     int attempt = 0;
     while (table[index].first != "" && table[index].first != key) {

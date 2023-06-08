@@ -6,7 +6,7 @@ HashOpenStr::HashOpenStr(int c) {
   table = new std::list<std::pair<long, int>>[capacity];
 }
 
-void HashOpenStr::insertItem(long key, int data) {
+void HashOpenStr::insert(long key, int data) {
   int index = hashFunction(key);
   table[index].push_back(std::make_pair(key, data));
 }
@@ -26,7 +26,7 @@ void HashOpenStr::deleteItem(long key) {
   }
 }
 
-int HashOpenStr::searchItem(long key) {
+int HashOpenStr::find(long key) {
   int index = hashFunction(key);
 
   for (auto it = table[index].begin(); it != table[index].end(); it++) {

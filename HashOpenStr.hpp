@@ -12,9 +12,9 @@ private:
 
 public:
   HashOpenStr(int V);
-  void insertItem(std::string key, int data);
+  void insert(std::string key, int data);
   void deleteItem(std::string key);
-  int searchItem(std::string key);
+  int find(std::string key);
   int checkPrime(int n);
   int getPrime(int n);
   int hashFunction(std::string key);
