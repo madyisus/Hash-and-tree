@@ -4,13 +4,13 @@
 #include <iostream>
 #include <list>
 
-class HashOpenStr {
+class HashOpenLong {
 private:
   int capacity;
   std::list<std::pair<long, int> > *table;
 
 public:
-  HashOpenStr(int V);
+  HashOpenLong(int V);
   void insert(long key, int data);
   void deleteItem(long key);
   int find(long key);

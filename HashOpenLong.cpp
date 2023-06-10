@@ -1,17 +1,17 @@
 #include "HashOpenLong.hpp"
 
-HashOpenStr::HashOpenStr(int c) {
+HashOpenLong::HashOpenLong(int c) {
   int size = getPrime(c);
   this->capacity = size;
   table = new std::list<std::pair<long, int>>[capacity];
 }
 
-void HashOpenStr::insert(long key, int data) {
+void HashOpenLong::insert(long key, int data) {
   int index = hashFunction(key);
   table[index].push_back(std::make_pair(key, data));
 }
 
-void HashOpenStr::deleteItem(long key) {
+void HashOpenLong::deleteItem(long key) {
   int index = hashFunction(key);
 
   std::list<std::pair<long, int>>::iterator i;
@@ -26,7 +26,7 @@ void HashOpenStr::deleteItem(long key) {
   }
 }
 
-int HashOpenStr::find(long key) {
+int HashOpenLong::find(long key) {
   int index = hashFunction(key);
 
   for (auto it = table[index].begin(); it != table[index].end(); it++) {
@@ -38,7 +38,7 @@ int HashOpenStr::find(long key) {
   return -1;
 }
 
-int HashOpenStr::checkPrime(int n) {
+int HashOpenLong::checkPrime(int n) {
   int i;
   if (n == 1 || n == 0) {
     return 0;
@@ -51,7 +51,7 @@ int HashOpenStr::checkPrime(int n) {
   return 1;
 }
 
-int HashOpenStr::getPrime(int n) {
+int HashOpenLong::getPrime(int n) {
   if (n % 2 == 0) {
     n++;
   }
@@ -61,11 +61,11 @@ int HashOpenStr::getPrime(int n) {
   return n;
 }
 
-int HashOpenStr::hashFunction(long key) {
+int HashOpenLong::hashFunction(long key) {
   return (key % capacity);
 }
 
-void HashOpenStr::displayHash() {
+void HashOpenLong::displayHash() {
   for (int i = 0; i < capacity; i++) {
     std::cout << "table[" << i << "]";
     for (auto x : table[i]) {
