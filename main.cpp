@@ -30,7 +30,7 @@ switch (atoi(argv[1]))
 
     outfile_name =  "insertion" + selected_class + "_results.csv";
     column_names = "n,time[ms]\n";
-    outfile.open(outfile_name);
+    outfile.open("./outputs/"+outfile_name);
     outfile << column_names;
 
     for(int n = 0; n < 25001; n+=2500){ // Realizamos lotes de insercion de n elementos a una tabla de tamaño t_size
@@ -42,6 +42,7 @@ switch (atoi(argv[1]))
         }
         double avg_time = mm_total_time/20;
     outfile<<n<<","<<avg_time<<endl;
+    cout<<"Saved in file: ./outputs/"<<outfile_name<<endl;
 
     }
     outfile.close();
@@ -58,7 +59,7 @@ switch (atoi(argv[1]))
     string input_data = "_in_table.csv";
     outfile_name =  "search" + selected_class + input_data;
     column_names = "key,time[ms]\n";
-    outfile.open(outfile_name);
+    outfile.open("./outputs/"+outfile_name);
     outfile << column_names;
 
     // Cargamos los datos en la estructura
@@ -94,7 +95,7 @@ switch (atoi(argv[1]))
 
          }
     outfile.close();
-    cout<<"Saved in file: "<<outfile_name<<endl;
+    cout<<"Saved in file: ./outputs/"<<outfile_name<<endl;
     break;
 
     }
