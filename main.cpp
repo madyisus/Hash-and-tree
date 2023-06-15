@@ -30,7 +30,7 @@ switch (atoi(argv[1]))
     //################## Medición de tiempo de inserción #########################
 
     outfile_name =  "insertion" + selected_class + "_results.csv";
-    column_names = "n,time[ns]\n";
+    column_names = "n,time[ms]\n";
     outfile.open("./outputs/"+outfile_name);
     outfile << column_names;
 
