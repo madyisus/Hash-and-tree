@@ -20,7 +20,7 @@ long long insertion_time_ms(int n) {
         }
 
     auto end_time = std::chrono::high_resolution_clock::now();
-    return std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
 }
 
 template <typename key_type,typename my_class>
