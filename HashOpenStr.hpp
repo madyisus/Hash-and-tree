@@ -1,5 +1,5 @@
-
-#define HASHTABLE_HPP
+#ifndef HASHTABLESTR_HPP
+#define HASHTABLESTR_HPP
 
 #include <iostream>
 #include <string>
@@ -21,3 +21,4 @@ public:
   void displayHash();
 };
 
+#endif

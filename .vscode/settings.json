@@ -7,6 +7,17 @@
         "vector": "cpp",
         "chrono": "cpp",
         "functional": "cpp",
-        "iostream": "cpp"
-    }
+        "iostream": "cpp",
+        "__bit_reference": "cpp",
+        "__config": "cpp",
+        "__hash_table": "cpp",
+        "__string": "cpp",
+        "__tree": "cpp",
+        "algorithm": "cpp",
+        "bitset": "cpp",
+        "locale": "cpp",
+        "map": "cpp",
+        "string_view": "cpp"
+    },
+    "cmake.configureOnOpen": false
 }
