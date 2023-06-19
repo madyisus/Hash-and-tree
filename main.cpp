@@ -16,7 +16,7 @@ using namespace std;
 
 int main(int argc, char *argv[]){
 
-    string selected_class = "HashOpenStr"; // estructura usada
+    string selected_class = "HashClosedLong"; // estructura usada
     string outfile_name, column_names;
     int t_size = 30000; // tamaño fijo de la tabla hash 
     long mm_total_time; // medidor de tiempo total
@@ -40,7 +40,7 @@ switch (atoi(argv[1]))
         // Medimos el tiempo de insercion 20 veces y tomamos el promedio simple
         mm_total_time = 0;
         for(int k = 0; k < 20;k++){
-            long long time = insertion_time_ms<string, HashOpenStr>(n);
+            long long time = insertion_time_ms<long, HashClosedLong>(n);
             mm_total_time += time;
         }
         long long avg_time = mm_total_time/20;
@@ -57,10 +57,10 @@ switch (atoi(argv[1]))
     //################## Medición de tiempo de búsqueda ###########################
 
     int followers, n = 26101; // n = cantidad de elementos a insertar
-    string index;
+    long index;
     string username;
-    string table_data = "clean_str_id.csv"; // datos en la tabla
-    string input_data = "_in_table.csv";
+    string table_data = "clean_int_id.csv"; // datos en la tabla
+    string input_data = "_not_in_table.csv";
     outfile_name =  "search" + selected_class + input_data;
     column_names = "key,time[ns]\n";
     outfile.open("./outputs/"+outfile_name);
@@ -68,7 +68,7 @@ switch (atoi(argv[1]))
 
     // Cargamos los datos en la estructura
     // AVLTree<string> tree;
-    HashOpenStr table(t_size); // Creamos la estructura
+    HashClosedLong table(t_size); // Creamos la estructura
     ifstream ss(table_data);    // abrimos stream para rellenar la tabla
 
         while (n--){            // Insertamos datos en la tabla
@@ -78,7 +78,7 @@ switch (atoi(argv[1]))
         }
 
     int n_keys = 300;       // cantidad de elementos a buscar
-    string key;
+    long key;
 
 
     // Ahora se realizan las búsquedas sobre la estructura ya creada
