@@ -1,3 +1,4 @@
+// from https://www.programiz.com/dsa/hash-table and updated with chatgpt
 #include "HashOpenStr.hpp"
 
 HashOpenStr::HashOpenStr(int c) {
@@ -77,4 +78,3 @@ void HashOpenStr::displayHash() {
   }
 }
 
-// from https://www.programiz.com/dsa/hash-table and updated with chatgpt

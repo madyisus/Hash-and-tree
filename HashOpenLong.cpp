@@ -1,4 +1,5 @@
 #include "HashOpenLong.hpp"
+// from https://www.programiz.com/dsa/hash-table 
 
 HashOpenLong::HashOpenLong(int c) {
   int size = getPrime(c);
@@ -75,4 +76,3 @@ void HashOpenLong::displayHash() {
   }
 }
 
-// from https://www.programiz.com/dsa/hash-table and updated with chatgpt
