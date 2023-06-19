@@ -1,5 +1,5 @@
-
-#define HASHTABLE_HPP
+#ifndef HASHTABLELONG_HPP
+#define HASHTABLELONG_HPP
 
 #include <iostream>
 #include <list>
@@ -20,3 +20,4 @@ public:
   void displayHash();
 };
 
+#endif

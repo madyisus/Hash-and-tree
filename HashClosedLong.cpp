@@ -3,7 +3,7 @@
 class HashClosedLong {
 private:
   int size; 
-  std::vector<std::pair<long, int>> table; 
+  std::vector<std::pair<long, int> > table; 
 
   int hash(long key) const {
     return key % size;
