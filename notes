@@ -1,8 +1,0 @@
-Arbol string -> AVLTree
-Arbol long -> AVLTree (25 KB el de 25mil)
-
-Hash cerrado string -> Vlermanda simple_hash - HashClosedStr
-Hash cerrado long -> Vlermanda modificado - HashClosedLong
-
-Hash abierto string -> HashOpenStr (programizz modificado)
-Hash abierto long -> HashOpenLong (programizz)
